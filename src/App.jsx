@@ -15,9 +15,14 @@ function App() {
   // for spend time on read
   const [readingTime, setreadingTime] = useState(0);
 
-  const handleReadingTime = (time) => {
+  const handleMarkasRead = (id, time) => {
     const newreadingtime = readingTime + time;
     setreadingTime(newreadingtime);
+    // remove the read id by filter
+    console.log("remove id", id);
+
+    const remainingBookmarks = bookmark.filter((blog) => blog.id != id);
+    setBookmark(remainingBookmarks);
   };
   // for spend time on read
 
@@ -25,10 +30,10 @@ function App() {
     <>
       <div className="p-5">
         <Header></Header>
-        <div className="md:flex gap-5  justify-between max-w-7xl mx-auto ">
+        <div className="md:flex gap-5 justify-between max-w-7xl mx-auto ">
           <Blogs
             handleBookmarks={handleBookmarks}
-            handleReadingTime={handleReadingTime}
+            handleMarkasRead={handleMarkasRead}
           ></Blogs>
           <Bookmarks bookmark={bookmark} readingTime={readingTime}></Bookmarks>
         </div>

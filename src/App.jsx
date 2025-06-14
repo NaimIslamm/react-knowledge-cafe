@@ -4,17 +4,32 @@ import Blogs from "./Components/Blogs/Blogs";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
 import Header from "./Components/Header/Header";
 function App() {
-  const [Bookmark, setBookmark] = useState([]);
+  // for bookmarks
+  const [bookmark, setBookmark] = useState([]);
+
   const handleBookmarks = (blog) => {
-    const newBookmarks = [...Bookmark, blog];
+    const newBookmarks = [...bookmark, blog];
     setBookmark(newBookmarks);
   };
+  // for bookmarks
+  // for spend time on read
+  const [readingTime, setreadingTime] = useState(0);
+
+  const handleReadingTime = (time) => {
+    const newreadingtime = readingTime + time;
+    setreadingTime(newreadingtime);
+  };
+  // for spend time on read
+
   return (
     <>
       <Header></Header>
-      <div className="md:flex justify-between max-w-7xl mx-auto">
-        <Blogs handleBookmarks={handleBookmarks}></Blogs>
-        <Bookmarks Bookmark={Bookmark}></Bookmarks>
+      <div className="md:flex gap-5  justify-between max-w-7xl mx-auto ">
+        <Blogs
+          handleBookmarks={handleBookmarks}
+          handleReadingTime={handleReadingTime}
+        ></Blogs>
+        <Bookmarks bookmark={bookmark} readingTime={readingTime}></Bookmarks>
       </div>
     </>
   );

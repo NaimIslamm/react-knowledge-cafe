@@ -6,7 +6,7 @@
     "author": "Sarah Johnson",
     "author_img": "https://randomuser.me/api/portraits/women/44.jpg",
     "posted_date": "2025-06-05",
-    "reading_time": "6 min read",
+    "reading_time": 6,
     "hashtag": "#ai #machinelearning #tech"
   },
   {
@@ -16,7 +16,7 @@
     "author": "David Kim",
     "author_img": "https://randomuser.me/api/portraits/men/52.jpg",
     "posted_date": "2025-06-02",
-    "reading_time": "5 min read",
+    "reading_time": 5,
     "hashtag": "#design #ux #ui"
   },
   {
@@ -26,7 +26,7 @@
     "author": "Amina Begum",
     "author_img": "https://randomuser.me/api/portraits/women/68.jpg",
     "posted_date": "2025-05-30",
-    "reading_time": "7 min read",
+    "reading_time": 7,
     "hashtag": "#javascript #es2025 #webdev"
   },
   {
@@ -36,7 +36,7 @@
     "author": "Carlos Ruiz",
     "author_img": "https://randomuser.me/api/portraits/men/33.jpg",
     "posted_date": "2025-05-28",
-    "reading_time": "4 min read",
+    "reading_time": 4,
     "hashtag": "#startup #productivity #growth"
   },
   {
@@ -46,7 +46,7 @@
     "author": "Nina Patel",
     "author_img": "https://randomuser.me/api/portraits/women/21.jpg",
     "posted_date": "2025-05-25",
-    "reading_time": "8 min read",
+    "reading_time": 8,
     "hashtag": "#cybersecurity #privacy #techtrends"
   }
 ]

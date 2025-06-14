@@ -23,13 +23,15 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <div className="md:flex gap-5  justify-between max-w-7xl mx-auto ">
-        <Blogs
-          handleBookmarks={handleBookmarks}
-          handleReadingTime={handleReadingTime}
-        ></Blogs>
-        <Bookmarks bookmark={bookmark} readingTime={readingTime}></Bookmarks>
+      <div className="p-5">
+        <Header></Header>
+        <div className="md:flex gap-5  justify-between max-w-7xl mx-auto ">
+          <Blogs
+            handleBookmarks={handleBookmarks}
+            handleReadingTime={handleReadingTime}
+          ></Blogs>
+          <Bookmarks bookmark={bookmark} readingTime={readingTime}></Bookmarks>
+        </div>
       </div>
     </>
   );

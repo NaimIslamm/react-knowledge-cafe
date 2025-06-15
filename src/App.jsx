@@ -8,8 +8,14 @@ function App() {
   const [bookmark, setBookmark] = useState([]);
 
   const handleBookmarks = (blog) => {
-    const newBookmarks = [...bookmark, blog];
-    setBookmark(newBookmarks);
+    // ek tar beshi add korte dewa hbena eijnno find diye khujlam j add ase naki jodi thake tahle else a alert show korbe r jodi na thake tahle add hbe
+    const isExist = bookmark.find((item) => item.id == blog.id);
+    if (!isExist) {
+      const newBookmarks = [...bookmark, blog];
+      setBookmark(newBookmarks);
+    } else {
+      alert("Already Added to the bookmark");
+    }
   };
   // for bookmarks
   // for spend time on read
@@ -19,7 +25,7 @@ function App() {
     const newreadingtime = readingTime + time;
     setreadingTime(newreadingtime);
     // remove the read id by filter
-    console.log("remove id", id);
+    // console.log("remove id", id);
 
     const remainingBookmarks = bookmark.filter((blog) => blog.id != id);
     setBookmark(remainingBookmarks);

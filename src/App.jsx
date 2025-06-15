@@ -24,6 +24,7 @@ function App() {
   const handleMarkasRead = (id, time) => {
     const newreadingtime = readingTime + time;
     setreadingTime(newreadingtime);
+
     // remove the read id by filter
     // console.log("remove id", id);
 

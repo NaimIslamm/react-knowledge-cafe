@@ -1,6 +1,6 @@
 import Bookmark from "../Bookmark/Bookmark";
 
-const Bookmarks = ({ bookmark, readingTime }) => {
+const Bookmarks = ({ bookmark, readingTime, handleDeleteBookmark }) => {
   return (
     <div className="md:w-1/3">
       <div className="bg-sky-200 p-4 mb-4 rounded-2xl text-center border-blue">
@@ -13,7 +13,11 @@ const Bookmarks = ({ bookmark, readingTime }) => {
           Bookmarks Blogs:{bookmark.length}
         </h2>
         {bookmark.map((bookmark, idx) => (
-          <Bookmark key={idx} bookmark={bookmark}></Bookmark>
+          <Bookmark
+            key={idx}
+            bookmark={bookmark}
+            handleDeleteBookmark={handleDeleteBookmark}
+          ></Bookmark>
         ))}
       </div>
     </div>

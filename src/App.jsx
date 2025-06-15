@@ -32,7 +32,10 @@ function App() {
     setBookmark(remainingBookmarks);
   };
   // for spend time on read
-
+  const handleDeleteBookmark = (item) => {
+    const remainingBookmarks = bookmark.filter((blog) => blog.id != item.id);
+    setBookmark(remainingBookmarks);
+  };
   return (
     <>
       <div className="p-5">
@@ -42,7 +45,11 @@ function App() {
             handleBookmarks={handleBookmarks}
             handleMarkasRead={handleMarkasRead}
           ></Blogs>
-          <Bookmarks bookmark={bookmark} readingTime={readingTime}></Bookmarks>
+          <Bookmarks
+            bookmark={bookmark}
+            readingTime={readingTime}
+            handleDeleteBookmark={handleDeleteBookmark}
+          ></Bookmarks>
         </div>
       </div>
     </>

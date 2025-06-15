@@ -32,10 +32,14 @@ function App() {
     setBookmark(remainingBookmarks);
   };
   // for spend time on read
+
+  // remove/delete bookmark
   const handleDeleteBookmark = (item) => {
     const remainingBookmarks = bookmark.filter((blog) => blog.id != item.id);
     setBookmark(remainingBookmarks);
   };
+  // remove/delete bookmark
+
   return (
     <>
       <div className="p-5">
